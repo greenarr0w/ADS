@@ -31,7 +31,7 @@ import java.util.LinkedList;
 import java.util.Set;
 
 public class ExBoxFrame extends JFrame implements ActionListener, ItemListener {
-	private static final double SCALE = 1;
+	private static final double SCALE = 2;
 	private JMenuItem connect, open, test, textView, graphicView;
 	private JButton enter;
 	private JTextField arguments;
