@@ -2,12 +2,12 @@ package ch.zhaw.ads.praktikum2;
 
 import ch.zhaw.ads.CommandExecutor;
 
-import javax.print.DocFlavor;
 import java.util.List;
 
 public class TaskServer implements CommandExecutor {
 
-    private List<String> todoList = new MyList<>();
+    //private final List<String> todoList = new MyList<>();
+    private final List<String> todoList = new SortedList<>(true);
     private static final String ADD = "ADD";
     private static final String REMOVE = "REMOVE";
 
@@ -29,15 +29,15 @@ public class TaskServer implements CommandExecutor {
             throw new IllegalArgumentException("unknown command " + cmd);
         }
 
-        return null;
+        return todoList.toString();
     }
 
     private void removeTask(String name) {
-        todoList.add(name);
+        todoList.remove(name);
     }
 
     private void addTask(String name) {
-        todoList.remove(name);
+        todoList.add(name);
     }
 
 }

@@ -4,7 +4,7 @@ import java.util.AbstractList;
 
 public class MyList<T extends Comparable<T>> extends AbstractList<T> {
 
-    private ListNode head;
+    protected ListNode head;
 
     @Override
     public boolean add(T object) {
@@ -88,4 +88,8 @@ public class MyList<T extends Comparable<T>> extends AbstractList<T> {
         }
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "\n";
+    }
 }
