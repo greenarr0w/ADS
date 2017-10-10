@@ -1,4 +1,6 @@
-package ch.zhaw.ads;
+package ch.zhaw.ads.praktikum4;
+
+import ch.zhaw.ads.CommandExecutor;
 
 public class TestGraphicServer implements CommandExecutor {
       

@@ -1,4 +1,4 @@
-package ch.zhaw.ads;
+package ch.zhaw.ads.praktikum4;
 
 
 public class Turtle {
