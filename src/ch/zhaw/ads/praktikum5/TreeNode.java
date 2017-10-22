@@ -2,13 +2,13 @@ package ch.zhaw.ads.praktikum5;
 
 class TreeNode<T extends Comparable<T>> {
 	T element;
-	TreeNode left, right;
+	TreeNode<T> left, right;
 	int height;
 	
 	TreeNode(T element){
 		this.element = element;
 	}
-	TreeNode(T element, TreeNode left, TreeNode right){
+	TreeNode(T element, TreeNode<T> left, TreeNode<T> right){
 		this(element); this.left = left; this.right = right;
 	}
 	
