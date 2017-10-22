@@ -7,8 +7,8 @@
 
 2.) Jeweils immer den mittleren Wert nehmen
 Niveau 0: 10
-Niveau 1, links: 7
-Niveau 1, rechts: 14
+Niveau 1: links: 7
+Niveau 1: rechts: 14
 und so weiter...
 Falls es kein mittleres Element gib muss man entweder aufrunden oder abrunden.
 Beispiel 5 Elemente: 5 / 2 = 2.5 also entweder das 2. oder das 3. Element nehmen.
