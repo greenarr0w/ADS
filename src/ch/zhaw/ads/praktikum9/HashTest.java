@@ -23,7 +23,7 @@ public class HashTest {
 		towns.add(new Town(7,"Roma","RM"));
 		towns.add(new Town(5,"Torino","TO"));
 		
-		hashmap = new MyHashtable<>(1000);
+		hashmap = new MyHashtable<>(10000);
 	}
     
 	@Test
