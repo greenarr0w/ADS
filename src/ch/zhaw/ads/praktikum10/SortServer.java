@@ -43,7 +43,7 @@ public class SortServer implements CommandExecutor {
         String print = "time=" + (double) (end - start) / count;
         System.out.println(print);
 
-        bubbleSortComplete(intArray);
+        consumer.accept(intArray);
         boolean sorted = checkSorted(intArray);
 
         StringBuilder stringBuilder = new StringBuilder();
@@ -54,15 +54,15 @@ public class SortServer implements CommandExecutor {
     }
 
     private void bubbleSortComplete(int[] intArray) {
-        boolean hasSwapped = false;
-        for (int i = 0; i < intArray.length - 1; i++) {
-            if (intArray[i] > intArray[i + 1]) {
-                swap(intArray, i, i + 1);
-                hasSwapped = true;
+        boolean hasSwapped = true;
+        while (hasSwapped) {
+            hasSwapped = false;
+            for (int i = 0; i < intArray.length - 1; i++) {
+                if (intArray[i] > intArray[i + 1]) {
+                    swap(intArray, i, i + 1);
+                    hasSwapped = true;
+                }
             }
-        }
-        if (hasSwapped) {
-            bubbleSortComplete(intArray);
         }
     }
 
