@@ -16,7 +16,7 @@ public class SortServer implements CommandExecutor {
         String action = split[0];
         Consumer<int[]> consumer;
         if(action.toLowerCase().equals("insertion")) {
-            consumer = this::insertionSort;
+            consumer = SortServer::insertionSort;
         } else if(action.toLowerCase().equals("bubble")) {
             consumer = this::bubbleSortComplete;
         } else if(action.toLowerCase().equals("selection")) {
@@ -80,7 +80,7 @@ public class SortServer implements CommandExecutor {
         }
     }
 
-    private void insertionSort(int[] intArray) {
+    public static void insertionSort(int[] intArray) {
         for (int k = 1; k < intArray.length; k++)
             if (intArray[k] < intArray[k - 1]) {
                 int x = intArray[k];
@@ -98,7 +98,7 @@ public class SortServer implements CommandExecutor {
         intArray[index2] = tmp;
     }
 
-    private boolean checkSorted(int[] intArray) {
+    public static boolean checkSorted(int[] intArray) {
         for (int i = 0; i < intArray.length - 1; i++) {
             if (intArray[i] > intArray[i + 1]) {
                 return false;
